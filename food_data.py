@@ -112,7 +112,7 @@ categories = {
     102: "salad"
 }
 
-data_name = "food_train"
+data_name = "your_data_name"
 img_path = 'your_root_to_img'
 ann_path = 'your_root_to_ann'
 with open('your_root_to_text', 'r', encoding='utf-8') as f:
