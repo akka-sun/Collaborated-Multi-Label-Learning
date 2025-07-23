@@ -132,7 +132,3 @@ for i,img in tqdm(enumerate(image_list),total=len(image_list)):
     gt_ids = gt_ids[gt_ids != 103]
     gt_ids = gt_ids.tolist()
     utils.json_write(data_name, img, ai_ans, pred_ids, gt_ids)
-    preds_label = np.zeros(103, dtype=int)
-    preds_label[pred_ids] = 1
-    gt_label = np.zeros(103, dtype=int)
-    gt_label[gt_ids] = 1
