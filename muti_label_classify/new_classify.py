@@ -28,8 +28,7 @@ epochs=300
 stop_epoch = 1000
 print_freq=200
 
-data_name='food_gemma'
-loss_name='ll'
+data_name='your_data_name'
 best_mAP=0
 best_of1=0
 if 'coco' in data_name:
@@ -64,12 +63,7 @@ if not os.path.exists(output):
 def main():
     global best_mAP
     global best_of1
-    if loss_name=='mld':
-        model = CLIP_mld(num_classes)
-        model = add_ml_decoder_head(model, num_classes=num_classes, num_of_groups=-1,
-                                    decoder_embedding=768, zsl=0)
-    else:
-        model = CLIP(num_classes)
+    model = CLIP(num_classes)
     model = model.cuda()
     train_dataset, val_dataset = get_datasets(data_name,train_img_dir,train_json_dir,train_ai_json_dir,val_img_dir,val_json_dir,val_ai_json_dir)
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=False)
