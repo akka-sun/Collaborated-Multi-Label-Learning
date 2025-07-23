@@ -17,7 +17,9 @@ see <https://github.com/LARC-CMU-SMU/FoodSeg103-Benchmark-v1>
 ### Preparing VLM api
 prepare VLM api and fill in the api in `vlm_api.py`
 ### Generate CML
-run `coco_data.py` `ade20k_data.py` `food_data.py` to generate CML
+run `coco_data.py` `ade20k_data.py` `food_data.py` to generate CML and get a json file
 ## Train the Model
 ### Generate txt file
-use [TagCLIP](https://github.com/linyq2117/TagCLIP) to generate txt file
+use [TagCLIP](https://github.com/linyq2117/TagCLIP) to generate txt file and replace the txt file path in `muti_label_classify/dataset/new_XXXdataset.py`
+### Train the model
+run `muti_label_classify/new_classify.py` and do not forget to replace the file path with yours
