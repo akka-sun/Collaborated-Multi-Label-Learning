@@ -89,7 +89,7 @@ categories = {
     90: "toothbrush"
 }
 
-data_name = "coco_train"
+data_name = "your_data_name"
 img_path = "your_root_to_data"
 coco=COCO('your_root_to_coco_json')
 for i,img in tqdm(enumerate(os.listdir(img_path)),total=len(os.listdir(img_path))):
