@@ -160,7 +160,7 @@ categories = {
     150: 'flag'
 }
 
-data_name = "ade20k_train"
+data_name = "your_data_name"
 img_path = "your_root_to_img"
 ann_path = "your_root_to_ann"
 for i,img in tqdm(enumerate(os.listdir(img_path)),total=len(os.listdir(img_path))):
