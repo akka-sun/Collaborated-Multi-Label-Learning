@@ -160,7 +160,7 @@ categories = {
     150: 'flag'
 }
 
-data_name = "ade20k_gemma_train"
+data_name = "ade20k_train"
 img_path = "your_root_to_img"
 ann_path = "your_root_to_ann"
 for i,img in tqdm(enumerate(os.listdir(img_path)),total=len(os.listdir(img_path))):
@@ -175,7 +175,3 @@ for i,img in tqdm(enumerate(os.listdir(img_path)),total=len(os.listdir(img_path)
     gt_ids = gt_ids[gt_ids != 0]
     gt_ids = gt_ids.tolist()
     utils.json_write(data_name, img, ai_ans, pred_ids, gt_ids)
-    preds_label = np.zeros(151,dtype=int)
-    preds_label[pred_ids] = 1
-    gt_label = np.zeros(151,dtype=int)
-    gt_label[gt_ids] = 1
