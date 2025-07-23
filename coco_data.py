@@ -106,7 +106,3 @@ for i,img in tqdm(enumerate(os.listdir(img_path)),total=len(os.listdir(img_path)
     gt_ids = [ann['category_id'] for ann in anns]
     gt_ids = sorted(set(gt_ids))
     utils.json_write(data_name,img,ai_ans,pred_ids,gt_ids)
-    preds_label = np.zeros(91,dtype=int)
-    preds_label[pred_ids] = 1
-    gt_label = np.zeros(91,dtype=int)
-    gt_label[gt_ids] = 1
